@@ -1,7 +1,7 @@
 - name: Update and upgrade apt packages
   apt:
-    sudo upgrade: yes
-    update_cache: yes
+    upgrade: no
+    update_cache: no
     cache_valid_time: 86400 #One day
 
 - name: install JDK 8
