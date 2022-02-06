@@ -1,0 +1,13 @@
+- name: download artifact
+  get_url:
+     url: https://github.com/Anji399/big/raw/master/target/axis.war
+     dest: /tmp
+- name: copy artifact
+  copy:
+     src: /tmp/axis.war
+     dest: /opt/tomcat/webapps/axis.war
+     owner: tomcat
+     group: tomcat
+     remote_src: yes
+  notify: restart tomcat
+ 
